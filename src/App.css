@@ -1,38 +1,136 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.navbar{
+  width: "100%";
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.navbar-container{
+  padding-left: 160px;
+  padding-right: 160px;
+  display: flex;
+  flex-direction: row;
+  background-color: #D23A37;
+  justify-content: space-between;
+}
+.navbar-title{
+  color:white;
+  font-size: 44px;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-title p{
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.navbar-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-items p{
+  font-size: 18px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-right: 1px solid whitesmoke;
   color: white;
+  font-weight: 500;
 }
-
-.App-link {
-  color: #61dafb;
+.navbar-items p:hover{
+  font-size: 20px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-right: 1px solid whitesmoke;
+  cursor: pointer;
 }
+.navbar-items p:last-child{
+  font-size: 20px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: none;
+}
+.body{
+  background-image: url("https://s3.eu-central-1.amazonaws.com/static.obilet.com/images/page-banner/spring-background-2020.png");
+  width: "100%";
+  height: 430px;
+  background-color: royalblue;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -165px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Input-container{
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  width: 30%;
+  justify-content: center ;
+  align-items: center;
+  flex-direction: column;
+}
+.Input{
+  width: 80%;
+  margin-top: 0px;
+}
+.Input>p{
+}
+.Input div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.Input div input{
+  display: flex;
+  width: 90%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border:none
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.Input div input:focus{
+  width: 90%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border:none;
+  outline-width: 0;
+  background-color: #D23A37;
+
+}
+.today-tomorrow{
+  display: flex;
+  flex: ;
+  flex-direction: column !important ; 
+  background-color: blue;
+}
+.today-tomorrow>p{
+  width: 100%;
+  padding: 7px;
+  margin: 0px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border:1px solid grey;
+  border-radius: 5px;
+  margin: 0px;
+  text-align: center;
+  margin-bottom: 10;
+}
+.Input-border{
+  border-top: 0.1px solid rgb(205, 204, 204);
+  width:100%;
 }

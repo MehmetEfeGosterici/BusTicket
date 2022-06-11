@@ -1,3 +1,4 @@
+
 .navbar{
   width: "100%";
   justify-content: center;
@@ -56,8 +57,8 @@
 }
 .body{
   background-image: url("https://s3.eu-central-1.amazonaws.com/static.obilet.com/images/page-banner/spring-background-2020.png");
-  width: "100%";
-  height: 430px;
+  width: 100%;
+  height: 450px;
   background-color: royalblue;
   background-size: cover;
   background-repeat: no-repeat;
@@ -72,7 +73,7 @@
   display: flex;
   background-color: white;
   border-radius: 10px;
-  width: 30%;
+  width: 33%;
   justify-content: center ;
   align-items: center;
   flex-direction: column;
@@ -80,8 +81,8 @@
 .Input{
   width: 80%;
   margin-top: 0px;
-}
-.Input>p{
+  display: flex;
+  flex-direction: row;
 }
 .Input div {
   width: 100%;
@@ -109,28 +110,133 @@
   padding-top: 10px;
   border:none;
   outline-width: 0;
-  background-color: #D23A37;
-
+}
+.date{
+  display: flex;
+  flex-direction: row;
+  padding-top: 0px;
+}
+.dateSelector>input{
+  width:260px;
+  height: 30px;
+  border:none;
+  border-bottom: 1px solid;
+  margin-left: 10px;
+  
+}
+.date-container{
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  margin-top: -20px;
 }
 .today-tomorrow{
   display: flex;
-  flex: ;
-  flex-direction: column !important ; 
-  background-color: blue;
+  flex-direction: column;
+  height: 50px;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 25px;
+  padding-right: 0px;
 }
-.today-tomorrow>p{
-  width: 100%;
-  padding: 7px;
-  margin: 0px;
+.today-tomorrow>button{
+  background: none;
+  border: 1px solid;
+  border-radius: 6px;
   padding-top: 3px;
   padding-bottom: 3px;
-  border:1px solid grey;
-  border-radius: 5px;
-  margin: 0px;
-  text-align: center;
-  margin-bottom: 10;
+  padding-right: 5px;
+  padding-left: 5px;
+
 }
 .Input-border{
   border-top: 0.1px solid rgb(205, 204, 204);
   width:100%;
+}
+.title{
+  width: 80%;
+}
+.dateSelector{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.searchButton{
+  display:flex;
+  flex-direction: row;
+  background-color: #D23A37;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  border-radius: 10px;
+  position: relative;  
+  margin-bottom: 20px;
+}
+.searchButton>p{
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  color:white;
+  font-weight: 800;
+}
+.searchButton>div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 10px;
+  background-color: #b1302e;
+}
+.services{
+  width: 50%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.items-container{
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  height: 100%;
+}
+.item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(0,0,0,0.5);
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  color:white;
+  font-weight: 500;
+  width: 30%;
+  border-radius: 20px;
+  text-align: center;
+}
+.services>p{
+  color:white;
+  font-size: 35px;
+  font-family: sans-serif;
+  margin: 0px;
+}
+.copyright{
+  display: flex;
+  margin-top: auto;
+  justify-content: center;
+  margin-top: 132px;
+}
+.copyright>p{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  padding: 2px;
 }

@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useContext, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import {  ImLocation } from 'react-icons/im'
 import {  BiPlug, BiTransfer, BiWifi } from "react-icons/bi"
 import { AiOutlineClockCircle, AiOutlineDown, AiOutlineLeft, AiOutlineRight } from 'react-icons/ai'
@@ -19,11 +20,10 @@ const firms = [
 
 
 
-function Ticket() {
+function Ticket(props) {
 
-    
-
-    
+    const location = useLocation()
+    console.log(location.state)
 
     return (
         <div>
@@ -42,21 +42,21 @@ function Ticket() {
             <div className='destination'>
                 <div className='destination-item'>
                     <ImLocation />
-                    <p>Edirne</p>
+                    <p>{location.state.from}</p>
                 </div>
                 <div className='destination-transfer'>
                     <BiTransfer size={20} color={"white"} />
                 </div>
                 <div className='destination-item'>
                     <ImLocation />
-                    <p>Ankara</p>
+                    <p>{location.state.to}</p>
                 </div>
                 <div className='destination-date'>
                     <div>
                         <AiOutlineLeft />
                     </div>
                     <div className='date'>
-                        <p>11 Haziran Cumartesi</p>
+                        <p>{location.state.date}</p>
                     </div>
                     <div>
                         <AiOutlineRight />

@@ -92,7 +92,12 @@ function Firm({ title, addOn, color, takeOff, estimatedTime, route, seating, pri
                                         )
                                     })}
                                 </div>
-                                <Link to={"/payment"} >
+                                <div>
+                                    {chosen.length > 0 ? <div className='firm-data-price'>
+                                        <p>₺{chosen.length*parseInt(price)}</p>
+                                    </div> : null}
+                                </div>
+                                <Link to={"/payment"} state={{price:chosen.length*parseInt(price)}} >
                                     <button style={{ border: "none", backgroundColor: "#0ab285", color: "white", fontWeight: "600", width: "100%", padding: 10, borderRadius: 10, marginLeft: 20 }}>ONAYLA VE DEVAM ET</button>
                                 </Link>
                             </div>

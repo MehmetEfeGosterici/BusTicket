@@ -30,7 +30,7 @@ function Ticket() {
             <div className='navbar'>
                 <div className='navbar-container'>
                     <div className='navbar-title'>
-                        <p><b>öbilet</b>.com</p>
+                    <a style={{textDecoration:"none",color:"white"}} href="http://localhost:3000/" ><p><b>öbilet</b>.com</p></a>
                     </div>
                     <div className='navbar-items'>
                         <p>Üye Girişi</p>

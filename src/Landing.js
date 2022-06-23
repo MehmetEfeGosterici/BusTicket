@@ -1,5 +1,5 @@
 import "./App.css"
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Router, Link } from "react-router-dom"
 import { ImLocation } from "react-icons/im"
 import { FaChevronDown } from "react-icons/fa"
@@ -14,12 +14,19 @@ import { RiRefund2Line } from "react-icons/ri"
 import { FaRegCopyright } from "react-icons/fa"
 
 function Landing() {
+
+    const [info,setInfo] = useState({from:"Ankara",to:"Edirne",date:""})
+
+    useEffect(()=>{
+        console.log(info)
+    },[info])
+
     return (
         <div className='page'>
             <div className='navbar'>
                 <div className='navbar-container'>
                     <div className='navbar-title'>
-                        <p><b>öbilet</b>.com</p>
+                        <a style={{textDecoration:"none",color:"white"}} href="http://localhost:3000/" ><p><b>öbilet</b>.com</p></a>
                     </div>
                     <div className='navbar-items'>
                         <p>Üye Girişi</p>
@@ -30,14 +37,20 @@ function Landing() {
             </div>
             <div className='body'>
                 <div className='Input-container'>
-                    <div className='title'>
-                        <p>Kalkış Noktası</p>
+                    <div className='title' style={{marginTop:10}}>
+                        <label>Kalkış Noktası</label>
                     </div>
                     <div className='Input'>
-                        <div>
+                        <div style={{marginTop:15}}>
                             <ImLocation color='grey' size={25} />
-                            <input value={"Edirne"} />
-                            <FaChevronDown color='grey' size={25} />
+                            <select value={info.from} style={{width:"100%",fontSize:20,padding:0,outline:"none"}} onChange={(e)=>setInfo({...info,from:e.target.value})} >
+                                <option>Ankara</option>
+                                <option>Edirne</option>
+                                <option>Bursa</option>
+                                <option>Tekirdağ</option>
+                                <option>İzmir</option>
+                            </select>
+                            {/* <FaChevronDown color='grey' size={25} /> */}
                         </div>
                     </div>
                     <div className='Input-border' ></div>
@@ -47,8 +60,15 @@ function Landing() {
                     <div className='Input'>
                         <div>
                             <ImLocation color='grey' size={25} />
-                            <input value={"Ankara"} />
-                            <FaChevronDown color='grey' size={25} />
+                            <select value={info.to} style={{width:"100%",fontSize:20,padding:0,outline:"none"}} onChange={(e)=>setInfo({...info,to:e.target.value})} >
+                                <option>Edirne</option>
+                                <option>Ankara</option>
+                                <option>İstanbul</option>
+                                <option>Bursa</option>
+                                <option>Tekirdağ</option>
+                                <option>İzmir</option>
+                            </select>
+                            {/* <FaChevronDown color='grey' size={25} /> */}
                         </div>
                     </div>
                     <div className='Input-border' ></div>
@@ -59,7 +79,7 @@ function Landing() {
                         <div className='date'>
                             <div className='dateSelector'>
                                 <FaCalendarAlt color='grey' size={25} />
-                                <input value={"Tarih"} type={"date"} />
+                                <input style={{outline:"none"}} type={"date"} onSelect={(e)=>setInfo({...info,date:e.target.value})}  />
                             </div>
                         </div>
                         <div className='today-tomorrow'>
@@ -68,8 +88,8 @@ function Landing() {
                         </div>
                     </div>
                     <Link className="searchButton" to={"/buy"} >
-                            <p>OTOBÜS BİLETİ BUL</p>
-                            <div><AiOutlineRight color={"white"} size={20} /></div>
+                        <p>OTOBÜS BİLETİ BUL</p>
+                        <div><AiOutlineRight color={"white"} size={20} /></div>
                     </Link>
                 </div>
                 <div className='services'>

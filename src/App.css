@@ -92,7 +92,7 @@
   align-items: center;
   margin-bottom: 10px;
 }
-.Input div input{
+.Input div select{
   display: flex;
   width: 90%;
   padding-left: 20px;
